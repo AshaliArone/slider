@@ -13,11 +13,17 @@ $functiojn(){
 
     //create a function that will start the slider
     function startSlider(){
-        interval = setInterval(
-            $slideContainer.animate(),
+        interval = setInterval(function(){
+            $slideContainerb.animate{},
             animationspeed,
-            function(){}
-        )
+            function(){
+                currentSlide++;
+                if(currentSlide == $slides.length){
+                    currentSlide = 1;
+                    $slideContainer.css('margin-left', 0);
+                }
+            }
+        }, pause)
     }
 
     //create a function to stop the slider
